@@ -6,7 +6,7 @@
 
 // Replace with your network credentials
 const char* ssid = "obdo";
-const char* password = "mark31:5";
+const char* password = "obdo1234";
 
 WebServer server(80);  // Create a web server object
 
