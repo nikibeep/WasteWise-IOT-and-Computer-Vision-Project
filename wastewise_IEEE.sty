@@ -1,0 +1,323 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{WASTEWISE: SMART SEGREGATION AND ANALYSIS\\
+}
+
+\author{
+    \IEEEauthorblockN{Dr. Deepa V Jose}
+    \IEEEauthorblockA{\textit{Dept. of Computer Science (of Aff.)} \\
+    \textit{Christ (Deemed to be University) (of Aff.)}\\
+    Bengaluru, India \\
+    deepa.v.jose@christuniversity.in}
+
+    \and
+
+    \IEEEauthorblockN{Libin Baby}
+    \IEEEauthorblockA{\textit{Dept. of Computer Science (of Aff.)} \\
+    \textit{Christ (Deemed to be University) (of Aff.)}\\
+    Bengaluru, India \\
+    libin.baby@mca.christuniversity.in}
+
+    \and
+
+    \IEEEauthorblockN{Sankar Sam Jose}
+    \IEEEauthorblockA{\textit{Dept. of Computer Science (of Aff.)} \\
+    \textit{Christ (Deemed to be University) (of Aff.)}\\
+    Bengaluru, India \\
+    sankar.jose@mca.christuniversity.in}
+
+    \and
+
+    \IEEEauthorblockN{I J Nikhil George}
+    \IEEEauthorblockA{\textit{Dept. of Computer Science (of Aff.)} \\
+    \textit{Christ (Deemed to be University)}\\
+    Bengaluru, India \\
+    nikhil.george@mca.christuniversity.in}
+}
+
+\maketitle
+
+\begin{abstract}
+In a world grappling with escalating waste generation and environmental concerns, the integration of cutting-edge technologies is essential for effective waste management. The WasteWise  project presents a pioneering Waste Management System that combines Image Processing and the Internet of Things (IoT) to revolutionize the way we handle waste. The core innovation lies in the fusion of Image Processing and IoT. Image Processing techniques enable accurate identification and classification of waste items, while IoT provides real-time data for intelligent decision-making. This synergy empowers waste management authorities, reduces environmental impact, and promotes recycling. This paper explores the project’s objectives, technological innovations, and its pivotal role in advancing sustainable waste management practices in today’s world.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Sensors, image processing, Internet of Things, data analytics, waste segregation, computer vision
+\end{IEEEkeywords}
+
+\section{Introduction}
+Waste management is a critical challenge facing societies worldwide. With rapid urbanization and population growth, the efficient handling of waste has become paramount. Solid waste management is a global concern affecting individuals and governments, with their consumption and waste disposal choices significantly influencing community health, productivity, and cleanliness. Inadequate waste management has far-reaching consequences, such as harming wildlife that inadvertently ingest waste, contaminating the oceans, obstructing drainage systems leading to floods, breeding disease-carrying vectors, exacerbating respiratory issues from waste incineration emissions, impeding economic progress by discouraging tourism, and more. Although considerable efforts have been made to enhance waste management practices and mitigate the adverse impacts of improper waste disposal, there is still room for improvement in these methods [1].
+
+The WasteWise project emerges as an innovative solution to address this pressing issue. It leverages the power of cutting-edge technologies, particularly Image Processing, Internet of Things (IoT) and data analytics, to revolutionize waste management processes. The WasteWise project’s primary objective is to create an intelligent waste management system capable of automating various aspects of waste segregation and management. This system promises to bring about significant improvements in terms of accuracy, environmental sustainability, and cost-effectiveness. The catalyst for this project stems from the realization that traditional waste management methods are often inefficient and environmentally unsustainable [12]. The WasteWise project seeks to bridge this gap by introducing state-of-the-art technology into the waste management ecosystem.
+
+This paper provides an overview of the WasteWise project, highlighting its significance and potential to reshape how we manage waste in the modern world. It delves into the project’s key components, including its innovative use of IoT, data analytics, and automation, all aimed at creating a more efficient and sustainable waste management paradigm. Section 2 and 3 mentions the related works and the existing waste management systems. Section 4 details the proposed system architecture and the methodology adopted mentioning the advantages and drawbacks followed  the future scope for improvement in  Section 5. Section 6 mentions the results achieved followed by the references used for this research work.
+ 
+\section{Literature Review}
+Padmakshi Venkateshwara Rao and Pathan Mahammed Abdul Azeez, in their study, present an innovative solution called “IoT-based Waste Management for Smart Cities” to address the environmental challenges arising from insufficient waste collection, treatment, and disposal. This system, designed with a cost-effective approach, offers a means to monitor garbage levels in these bins and take prompt action to maintain cleanliness. To achieve this, they utilize the ‘Blynk app’ to receive immediate SMS notifications when a garbage bin approaches its capacity limit. The core components of their system include ultrasonic sensors, NodeMCU, the Blynk app, and a servo motor [2]. 
+
+The paper titled “Computer-vision-powered Automatic Waste Sorting Bin: a Machine Learning-based Solution on Waste Management” presents a computer-vision-powered Automatic Waste Sorting Bin, employing machine learning techniques, specifically the YOLOv5 model, controlled by a Raspberry Pi. The study showcases a commendable multiclass accuracy of 93.33\% after training the model for 150 epochs, and the flexibility of this solution is underscored as it can be easily retrained to adapt to various waste types. The paper’s significance lies in its demonstration of the potential of computer vision and machine learning in waste management. By successfully applying the YOLOv5 model on a Raspberry Pi, the authors prove that automation in waste sorting is feasible [8]. 
+
+The paper "Using YOLOv5 for Garbage Classification" addresses the critical issue of waste management in urban and rural areas, particularly in developing countries like China. It emphasizes the importance of intelligent waste sorting and disposal as a symbol of social progress and ecological preservation. The paper introduces a novel garbage classification model, GC-YOLOv5, leveraging computer vision and convolutional neural networks. It achieves remarkable accuracy in classifying various garbage types, even under different conditions and angles, with an average mAP exceeding 99\%. Additionally, it enables real-time cloud-based data storage and access, contributing significantly to the field of garbage classification and offering practical solutions for waste management and environmental protection [10]. 
+
+Nikolaos Baras and Dimitris Ziouzios introduce a solution titled “A cloud-based intelligent recycling bin for sorting household waste.”  Their system offers an affordable and efficient approach to household waste classification, making use of cloud technology. Through a centralized Information System, data from smart bins is collected, enabling the classification of waste through the application of Artificial Intelligence and neural networks. Remarkably, it achieves a high accuracy rate of 93.4\% in distinguishing various waste types [3].
+
+The paper titled “Standalone Frequency Based Automated Trash Bin and Segregator of Plastic Bottles and Tin Cans” presents a system that demonstrates how the piezoelectric amplifier framework can be utilized for input signal acquisition and noise elimination using a comparator. The system is triggered by the average frequency response of objects hitting the platform, with subsequent processing controlled by an Arduino [4]. 
+
+Mohini Ghuge and Dr. S. N. Bhadoria gave a solution in their article titled “Automatic waste sorting based on image processing.” The results presented in this study demonstrate the capabilities of the designed waste sorting system. The system effectively sorts waste and collects it into three containers, distinguishing between different types of waste to reduce power consumption. The use of neural network training has yielded promising results, with a high accuracy rate of 95\% achieved during the training phase on the validation set. The best model was further tested on the testing set, where it achieved an accuracy of 92\%, with specific detection rates of 93\% for paper, 92\% for plastic, and 93\% for metal. These outcomes illustrate the system’s potential in automating waste sorting and reducing human involvement, making it a valuable solution for efficient waste management. However, there are some notable drawbacks and areas for improvement. Firstly, the study highlights the need for further research in interfacing between modules to create a specific implementation plan. The absence of a detailed plan may have led to on-the-fly code creation, which could limit the functionality and result in debugging challenges. Additionally, there is room for more in-depth exploration of the mechanical design of the conveyor system, which is crucial for the efficient operation of the waste sorting process [5].
+
+The article “Intelligent waste management system using deep learning with IoT” presents a comprehensive waste management system that combines deep learning and Internet of Things (IoT) technologies. It underscores the significance of this approach by addressing the pressing issue of waste classification and real-time data monitoring, with a focus on household waste management. The authors introduce a well-structured architecture that employs a Convolutional Neural Network (CNN) for waste classification, a smart trash bin with multiple sensors for real-time monitoring, and connectivity via IoT and Bluetooth for data management. This innovative system aims to enhance the efficiency of waste management by achieving a classification accuracy of 95.3125\% and a System Usability Scale (SUS) score of 86\%.  It also acknowledges the limitations of the proposed model, such as its restricted waste categories, sensor count, and challenges related to detecting specific waste conditions. The article suggests that future research could address these limitations, paving the way for more optimized waste management solutions [6].
+
+The article “Smart Waste Segregation and Monitoring System using IoT” likely emphasizes the significance of efficient waste management in the context of urbanization and population growth. It may discuss the drawbacks of manual waste segregation, such as being expensive, time-consuming, and inefficient. Additionally, it might highlight the environmental and health implications of improperly managed waste, stressing the need for innovative solutions. The article’s proposed ‘SmartBin’ system is presented as a promising and cost-effective approach to automated waste segregation. The review could refer to similar systems or technologies that have been explored in the literature, showcasing the need for automation in waste management to improve hygiene, reduce health risks, and enhance efficiency. Furthermore, it may discuss the scalability of such systems for deployment in both households and public areas, emphasizing their adaptability to different waste management scenarios. Overall, the literature review is likely to establish the context for the proposed solution and its potential contributions to addressing contemporary waste management challenges [7].
+
+\section{Existing waste Management Systems}
+\begin{table}[htbp]
+\caption{Limitations of existing systems}
+\begin{tabular}{|p{1.7cm}|p{6cm}|}
+    \hline
+    \textbf{Existing Systems} & \textbf{Limitation} \\
+    \hline
+    Manual waste segregation and management & 
+    \begin{itemize}
+        \item Manual sorting can lead to errors and contamination of recyclables.
+        \item Inadequate recycling leads to increased landfill waste and pollution.
+        \item Higher operational costs.
+        \item Inefficient systems contribute to resource depletion and pollution.
+    \end{itemize} \\
+    \hline
+    Waste Management System Using Deep Learning with IoT [6] & 
+    \begin{itemize}
+        \item The system relies on conveyor belts, which is inherently slow. This may lead to bottlenecks or delays in the waste sorting process.
+        \item The absence of gas sensors in the system is a limitation. Gas sensing capabilities would be valuable for detecting and monitoring potentially hazardous or noxious gasses emitted from certain types of waste, enhancing safety and environmental monitoring.
+    \end{itemize} \\
+    \hline
+    Smart Waste Segregation and Monitoring System using IoT [7] & 
+    \begin{itemize}
+        \item No computer Vision
+        \item Technical Complexity: The system relies on various sensors and automation technology to function effectively. This complexity can lead to technical issues, breakdowns, or malfunctions, requiring specialized skills and resources for maintenance and repair.
+        \item The system categorizes waste into three main types (wet, dry, and metallic), but waste composition can be highly variable. It may struggle to accurately segregate waste that doesn't fit neatly into these categories, potentially leading to errors in segregation.
+    \end{itemize} \\
+    \hline
+    IoT-based Waste Management [2] & 
+    \begin{itemize}
+        \item The system primarily focuses on monitoring the fill levels of trash bins to ensure timely collection and maintenance.
+        \item This system relies on the internet and the Blynk app for real-time monitoring and notifications. While this is effective in urban areas with stable connectivity, it may not be suitable for regions with poor or unreliable internet access. In such areas, the system's functionality may be compromised.
+    \end{itemize} \\
+    \hline
+\end{tabular}
+\end{table}
+
+\section{Proposed System}
+The WasteWise system is a pioneering solution that redefines waste management by leveraging cutting-edge technologies to improve precision and sustainability. At its core, this innovative system utilizes computer vision, enabling the precise categorization of waste materials with unprecedented accuracy [12]. By employing this advanced technology, the system can distinguish between various types of waste, such as plastic, glass, metal, and bio, streamlining the waste sorting process and promoting more efficient recycling practices. The waste can be generally classified into two different sections: biodegradable and nonbiodegradable [9].
+
+To further enhance efficiency, WasteWise incorporates proximity sensors. These sensors monitor the fill levels of waste containers in real-time, allowing waste management teams to prioritize collections based on need. This not only reduces unnecessary pickups but also minimizes environmental impact by reducing fuel consumption and emissions, resulting in a more eco-friendly and cost-effective waste management process. Real-time data analytics play a pivotal role in the WasteWise system, empowering waste management authorities with crucial insights for informed decision-making. By providing real-time alerts and notifications to relevant stakeholders, the system ensures timely response to urgent issues, such as overflowing bins, and fosters transparency in the waste management process. This two-way communication not only enhances the efficiency of waste collection and disposal but also engages the community in a collaborative effort towards more sustainable waste practices. 
+
+\subsection{Proposed Architecture}\label{AA}
+The figure 1 below illustrates the step wise operation of the entire system.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth, height=0.3\textheight]{Arc_model.png}
+  \caption{WasteWise system’s solution architecture.png}
+  \label{fig:1 WasteWise system’s solution architecture.png}
+\end{figure}
+
+
+\subsubsection{Hardware Components}
+    \begin{itemize}
+        \item Cameras: Camera modules equipped with computer vision capabilities for waste item detection and classification.
+        \item Proximity Distance sensors: Proximity sensors are deployed on waste collection bins. These sensors monitor the proximity of waste bins and optimize collection schedules.
+        \item Gas sensors (MQ-9B) to measure toxicity in biodegradable wastes.
+        \item Edge Computing Devices: Computers for local processing and microcontrollers like ESP32 for control of sensors. Mobile IP camera as camera interface and managing data transmission.
+        \item Cloud-Based Analytics Platform: A cloud-based platform for storing and processing real-time data. Analytics algorithms for generating insights and predictive analytics. 
+         \item User Interface: A dynamic dashboard accessible through web or mobile applications. Provides waste management authorities with real-time information and actionable insights.
+    \end{itemize} \\
+
+\subsubsection{Software Components}
+    \begin{itemize}
+        \item Firmware for microcontrollers to interface with sensors and cameras.
+        \item Computer vision software for waste item detection and classification.
+        \item Real-time data processing and analytics software.
+        \item Dashboard development tools for creating the user interface.
+        \item Mobile or web applications for accessing the dashboard and receiving notifications. 
+    \end{itemize} \\
+
+\subsection{Methodology}
+The methodology for the Automatic Waste Segregator System combines hardware selection, Embedded C programming, computer vision, actuator implementation, waste level monitoring, and data visualization to create an efficient, user-friendly system that facilitates effective waste management and resource optimization.
+
+    \begin{itemize}
+        \item The Principle of the Segregation begins with the LED light, which is used to detect the entering of garbage, the white led and the ip camera is pointed in the way directing towards  the entry of the garbage which is collected on a sliding door; As we are using a Object Detection Model to process the video stream is live and detecting. The IP camera (mobile camera) will then take a picture, which is then fed through the trained model, outputting a picture with all the objects classified. Depending on the type of garbage, the trap door will open, dropping the garbage into the U bent, and the bent will move to the appropriate sorting bin.
+        \item Image Preparation is done using Roboflow, an online self-served annotation tool. All the images are first manually taken with the machine-fixed camera, then labeled each image manually according to their classes. Afterwards, the images are split into a dataset of appropriate ratio of training and testing (details in 2.3.4). Lastly, argumentations are applied to all the images in the dataset.(Mobile camera: exposure:0, pixel resolution of 640*480) .The dataset is now ready to be exported for machine learning model training. The sorting machine inbox is a controlled environment, the background of the images does not change from image to image. The model will process the video stream. Workflow of image preparation is represented in figure 2. 
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.5\textwidth, height=0.3\textheight]{wastewise_flowchart.png}
+            \caption{Flowchart of object detection preparation}
+            \label{fig:wastewise_flowchart.png}
+        \end{figure}
+        
+        \item The deployment phase of this project involves the utilization of Python as the primary programming language. This deployment makes use of several essential Python packages, including;
+            ESP32.GPIO: This package is employed for the purpose of controlling the GPIO (General-Purpose Input/Output) pins on the ESP32, enabling interaction with external hardware components.
+            
+            PyTorch: PyTorch is a widely-used framework, employed to access and utilize the YOLOv8 model. This deep learning framework allows for object detection and other machine learning tasks.
+            
+            OpenCV-Python: OpenCV-Python is a package that plays a crucial role in running an instance of the camera. It is commonly used for computer vision and image processing applications.
+            
+            YAML: YAML is a file format used for configuration purposes. In this deployment, it is employed to read and write .yaml files, which help in configuring and customizing the system.
+        \item Training the machine learning model involves using YOLOv8, a computer vision model to perform object detection. It is notable for combining object classification and bounding box prediction within a single end-to-end differentiable network [10]. Unlike its predecessors, YOLOv8 is implemented in the PyTorch framework, making it more lightweight and user-friendly. In this paper, we use YOLOv8 for training, and we assess the impact of model complexity, specifically YOLOv8 in the large size, by adjusting the number of training epochs and the train-test data split ratio. Each time a new dataset was created, YOLOv8 was used without any modifications. The split between training and testing images was in a ratio format, with 7845 images for training, 411 for testing and 809 images for validation which translates to 86.58\% for training, 4.54\% for testing and 8.92\% for validation. During the image labeling process, numerous sub-classes were used to categorize the different shapes and types within each class. However, when exporting the dataset, all subclasses were grouped under their respective main classes, which are ‘bio’,’glass’,‘plastic’ and ‘metal’. The model training parameters that were modified included setting the image resolution to 608*800 pixels, using a batch size of 32, and varying the number of training epochs from 25 to the maximum. All other parameters were kept at their default values provided by the YOLOv8 publisher, Ultralytics.
+        \item The results obtained from image processing are sent to the ESP32 via the HTTP protocol using both GET and PUT commands. This communication allows the stepper motor to be directed to the appropriate bin for disposal. 
+        \item The system is primarily powered by the ESP32 microcontroller, chosen for its versatility and compatibility with various sensors and communication protocols. To program the microcontroller and connected components, the Arduino IDE is employed, with the code written in the Embedded C language. This programming environment is well-documented and user-friendly, facilitating the development, testing, and deployment of the code effectively. Servo Motor and stepper motor are used as actuators to segregate waste items effectively, ensuring that each type of waste is directed to the appropriate bin. This approach promotes efficient recycling and waste management.
+        \item To monitor the fill level of each waste bin, an Ultrasonic sensor is strategically placed at the edge of each container. When a bin reaches its full capacity, a LED blinks in particular bin and the sensor triggers a ‘Bin is Full’ message which is then transmitted to the cleaning authorities. This proactive alert system ensures timely waste disposal and the optimal use of resources.
+        \item The project incorporates the development of a dynamic dashboard accessible through web or mobile applications. This dashboard provides real-time information on the status of each bin, offering waste management authorities valuable insights for decision-making. It allows them to monitor the system’s performance, review historical data, and make informed choices regarding waste collection and recycling operations.
+    \end{itemize} \\
+
+
+\subsection{Advantages and Disadvantages of the Proposed System}
+The Automatic Waste Segregator System offers a promising solution to modern waste management challenges, harnessing technology to enhance efficiency and sustainability. However, like any innovation, it comes with its set of advantages and disadvantages that warrant careful consideration. In the following sections, we will explore the strengths and potential drawbacks of this system.
+\subsubsection{Advantages}
+        \begin{itemize}
+        \item Efficient Waste Segregation: The system employs computer vision and servo motors to accurately segregate different types of waste, promoting efficient recycling practices and reducing contamination in recycling streams.
+        \item Real-Time Monitoring: Ultrasonic sensors and a dynamic dashboard provide real-time monitoring of waste bin fill levels, enabling timely waste collection and minimizing overflowing bins, which can lead to environmental and health hazards.
+        \item Cost Savings: By optimizing waste collection routes and schedules based on fill levels, the system reduces fuel consumption and operational costs for waste management authorities, leading to potential cost savings.
+        \item Environmental Benefits: Improved waste segregation and reduced waste overflow contribute to a cleaner environment and promote sustainable waste management practices, ultimately reducing the carbon footprint associated with waste disposal.
+        \item Data-Driven Decision-Making: The system generates actionable insights through data analytics, aiding waste management authorities in making informed decisions regarding resource allocation, service improvement, and future planning.
+        \item Proactive Alerts: The ‘Bin is Full’ alerts sent to cleaning authorities ensure a timely response to waste collection needs, enhancing the overall efficiency of waste management.
+    \end{itemize} \\
+
+\subsubsection{Disadvantages}
+        \begin{itemize}
+        \item Maintenance and Upkeep: Like any technology, the system requires regular maintenance and occasional upgrades to ensure consistent and accurate operation. This adds ongoing operational costs.
+        \item Technical Expertise: The operation and maintenance of the system require a level of technical expertise.
+        \item Dependency on Technology: The system is reliant on sensors and technology, making it susceptible to potential technical failures.
+        \item Privacy Concerns: The use of cameras for waste categorization raises potential privacy concerns related to image capture and processing. Adequate privacy measures and data protection must be in place.
+        \item Limited Compatibility: The system’s compatibility may be limited to areas with internet connectivity and may not be feasible in remote or underserved locations without reliable network access.
+        \item The model completely depending on the technical advantages would still have certain drawbacks in terms of boxing the frame (label frames)..
+    \end{itemize} \\
+
+\section{Results and Discussions}
+\subsection{Neural Network Layers}
+The provided table (Fig 3) represents a configuration of layers used in a neural network model, including various types such as convolutional (Conv), feature concatenation (Concat), feature transformation (C2f), spatial pyramid pooling (SPPF), upsampling (Upsample), and a specialized detection layer (Detect). These layers are employed in the network architecture to extract features, perform transformations, and execute object detection tasks [13].
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.5\textwidth, height=0.3\textheight]{conv_model_layer_yolos.png}
+            \caption{Neural Network layers}
+            \label{fig:conv_model_layer_yolos.png}
+        \end{figure}
+
+The tabular overview describes a neural network architecture predominantly tailored for object detection or similar computer vision tasks. Comprising a series of convolutional layers (Conv), these components execute feature extraction from images or feature maps. The specified parameters within the brackets of each convolutional layer outline the input and output channels, kernel size, and stride for data convolution. The network also incorporates feature transformation layers (C2f), which likely perform specific operations on the extracted features. Additionally, it utilizes spatial pyramid pooling (SPPF) layers to amalgamate information from diverse scales or regions within input feature maps. Upsampling layers expand the spatial dimensions, employing the ‘nearest’ method for interpolation. Further, concatenation layers merge feature maps from various network levels, enhancing the fusion of diverse feature representations. The architecture culminates in a specialized detection layer (Detect) responsible for generating predictions, potentially indicating the number of anchor boxes and the associated feature map scales for object detection tasks.The arguments [4, [128, 256, 512]] refer to the number of anchor boxes used, each associated with specific feature map scales (128, 256, and 512) for detection. This amalgamation of convolutional, transformation, pooling, and detection layers signifies a comprehensive approach to feature extraction and object detection within the neural network.
+One of the most commonly used Image as well as Object Detection algorithms in research is Convolutional Neural Networks (CNN). It is even used as a layer in many models which provide the same as Conv2D for 2D images ,etc [14].
+The output Y of a convolutional layer can be calculated using the convolution operation:
+
+\begin{equation}
+Y = f\left(\sum_{i,j} X[i,j] \times W[i,j] + b\right)
+\end{equation}
+
+where:
+\begin{itemize}
+\item $X$ is the input feature map.
+\item $W$ is the learnable filter (kernel) applied to the input.
+\item $b$ is the bias term.
+\item $f$ represents the activation function (e.g., ReLU).
+\end{itemize}
+
+\subsection{Confusion Matrix}
+Each row in the confusion matrix corresponds to the actual classes, and each column corresponds to the predicted classes. The values in the matrix represent the proportion or count of instances that fall into each category. Here is the interpretation based on the given confusion matrix in figure 4.
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.5\textwidth, height=0.3\textheight]{wastewise_confustion_marix.png}
+            \caption{Confusion Matrix of a YOLOv8 large model with 25 epochs}
+            \label{fig:wastewise_confustion_marix.png}
+        \end{figure}
+
+    \begin{itemize}
+        \item Biodegradable: The model has correctly classified all instances (100\%) that belong to the ‘Biodegradable’ category. However, there seems to be some confusion with Background, where 25\% of ‘Background’ items are misclassified as ‘Biodegradable’.
+        \item Glass: The model correctly identifies all instances (100\%) belonging to the ‘Glass’ category. It does not seem to confuse any other class with ‘Glass’.
+        \item  Metal: Similar to ‘Biodegradable’, the model correctly identifies all instances (100\%) that belong to the ‘Metal’ category. However, like in the case of ‘Biodegradable,’ it misclassified 25\% of ‘Background’ items as ‘Metal’.
+        \item Plastic: The model correctly classifies all instances (100\%) that belong to the "Plastic" category. Additionally, it misclassified 50\% of ‘Background’ items as ‘Plastic.’
+        \item Background: The model doesn’t seem to correctly identify any instances as ‘Background.’ It appears to mistake some instances of other categories as ‘Background’.
+    \end{itemize} 
+This interpretation shows that the model performs quite well in identifying the primary classes (Biodegradable, Glass, Metal, and Plastic) with high accuracy. However, there are certain issues with misclassification, particularly with the ‘Background’ class, where items from other categories are being mistaken for ‘Background’.
+
+\subsection{Visual Presentation of Model Result}
+The results graph (figure 5) depicts the performance of a model, likely in an object detection task, with metrics and losses recorded at 25 epochs. During training, the model demonstrated relatively low losses: 0.20 for box regression, 0.15 for classification, and 0.4 for dense feature learning. Additionally, the model exhibited high precision (0.977) and recall (0.967) for a specific class denoted as ‘B’. However, on the validation set, slightly higher losses were observed, notably in box regression (0.33) and dense feature learning (0.79), implying potential overfitting. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth, height=0.3\textheight]{wastewise_graph.png}
+    \caption{Model Result}
+    \label{fig:wastewise_graph.png}
+\end{figure}
+Despite this, the validation classification loss stood at 0.22, suggesting better generalization. Notably, the model displayed a high mean average precision of 0.96 at an IoU threshold of 0.50 and an mAP of 0.92 across a broader IoU range (0.50 to 0.95) for class B, indicating a strong overall balance between precision and recall. To improve the model’s generalization, efforts to address overfitting in bounding box regression and dense feature learning may be necessary.
+
+\begin{table}[htbp]
+\caption{Model Evaluation}
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Evaluation Indicator} & \textbf{Model} \\
+    \hline
+    metrics/precision (B)\% & 97.7 \\
+    \hline
+    metrics/recall(B)\% & 96.7 \\
+    \hline
+    metrics/mAP50(B)\% & 96 \\
+    \hline
+    metrics/mAP50-95(B)\% & 92 \\
+    \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+The given metrics provide an assessment of a model’s performance in a classification or object detection task. The precision metric (B) of 0.977 at 25 epochs signifies the model’s accuracy in correctly identifying relevant instances among those predicted as class B, emphasizing fewer false positives. Meanwhile, the recall (B) value of 0.967 indicates the model’s capability to capture most actual instances of class B, emphasizing fewer false negatives. Additionally, the mean average precision at an intersection over union (IoU) threshold of 0.50 (mAP50) is measured at 0.96, depicting the model’s precision-recall balance at a specific IoU threshold. Moreover, the mAP50-95, evaluated at various IoU thresholds from 0.50 to 0.95, is calculated at 0.92, encompassing the model’s performance across a range of IoU criteria, further highlighting its consistency in accurately identifying objects across varying levels of overlap or intersection. These metrics collectively demonstrate the model’s precision, recall, and overall accuracy in detecting and classifying class B objects, emphasizing both high precision and recall rates, which are essential for robust and accurate model performance.
+
+\subsection{Experiment Effect}
+The test pictures of metal tins, glass bottles,metal joints, plastic bags are shown in figure 6. As shown in the figure 5  it can be seen that Yolov8 can successfully classify and segregate waste based on the labels metal, plastic, glass and biodegradable. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth, height=0.3\textheight]{waste_detect.jpg}
+    \caption{All kinds of garbage in real scene}
+    \label{fig:waste_detect.jpg}
+\end{figure}
+
+\section{Conclusion}
+In this project, we present a Smart Waste Segregation system employing IoT technology. The YOLOv8 object detection model, trained to recognize distinct waste types—plastic, biodegradable, metal, and glass—demonstrates notable precision, achieving a precision of 0.977 and a recall of 0.967 for class B. The model's high accuracy in waste classification forms the core of an efficient waste management system. The wireless communication infrastructure facilitates the transmission of detection results to an ESP32 device, which orchestrates servo-controlled partitions, directing waste to designated bins. Ultrasound sensors, integrated into the bins, provide real-time feedback on waste levels, ensuring timely waste disposal and preventing overfilling. Moreover, the specialized biodegradable bin section, equipped with CH4 and CO gas sensors, monitors gas emissions, crucial in organic waste management.
+
+This innovative system encompasses an amalgamation of IoT, machine learning, and environmental sensing technologies, offering real-time waste sorting and monitoring. By incorporating trend analysis of bin fill levels and gas emissions, the system enables informed decision-making in waste management processes. The research findings highlight the system's efficacy in promoting sustainable waste segregation practices, contributing to environmental conservation and fostering data-driven insights for waste management strategies.
+
+\section{Authors and Affiliations}
+authors of this paper, "WASTEWISE: SMART SEGREGATION AND ANALYSIS",     Dr. Deepa V Jose , Professor of Department of Computer. Fr. Libin Baby, Sankar Sam Jose, Nikhil George I J, Student of MCA candidate in the Department of Computer Science at Christ(deemed to be university). Together, these author being an increase in accuracy and explore Image generator.
+
+\section{Acknowledgment}
+The authors would like to acknowledge the support of Christ(deemed to be University) in this research. We would also like to thank Prof.Dr.Deepa V Jose for their guidance and valuable feedback throughout the research process. Additionally, we would like to extend our gratitude to Friends for their valuable insights and contributions to this work.
+
+\begin{thebibliography}{00}
+\bibitem{b1} S. Kaza, L. Yao, P. Bhada-Tata, and F. V. Woerden, What a waste 2.0: A global snapshot of Solid Waste Management to 2050. Washington, DC, Virginia: World Bank Group, 2018.
+\bibitem{b2} Rao, P. V., Azeez, P. M. A., Peri, S. S., Kumar, V., Devi, R. S., Rengarajan, A., Thenmozhi, K., and Praveenkumar., P. (2020). IoT based Waste Management for Smart Cities. In 2020 International Conference on Computer Communication and Informatics (ICCCI). IEEE. https://doi.org/10.1109/iccci48352.2020.9104069
+\bibitem{b3} Baras, N., Ziouzios, D., Dasygenis, M., and Tsanaktsidis, C. (2020). A cloud based smart recycling bin for in-house waste classification. Presented at the 2020 International Conference on Electrical, Communication, and Computer Engineering (ICECCE). https://doi.org/10.1109/icecce49384.2020.9179349
+\bibitem{b4} Sejera, M., Ibarra, J. B., Canare, A. S., Escano, L., Mapanoo, D. C., and Suaviso, J. P. (2016). Standalone Frequency Based Automated Trash Bin and Segregator of Plastic Bottles and Tin Cans. Presented at the TENCON 2016 - 2016 IEEE Region 10 Conference. https://doi.org/10.1109/tencon.2016.7848454
+\bibitem{b5} Mohini Ghuge and Dr. S. N. Bhadoria, “Automatic waste sorting based on image processing.”International Journal of Advanced Research in Computer Engineering and Technology (IJARCET) Volume 7, Issue 6, June 2018
+\bibitem{b6} Rahman, Md. W., Islam, R., Hasan, A., Bithi, N. I., Hasan, Md. M., and Rahman, M. M. (2022). Intelligent waste management system using deep learning with IoT. In Journal of King Saud University - Computer and Information Sciences (Vol. 34, Issue 5, pp. 2072–2087). Elsevier BV. https://doi.org/10.1016/j.jksuci.2020.08.016
+\bibitem{b7} V, S., P, S., and S, H. J. R. (2019). Smart Waste Segregation and Monitoring System using IoT. In the International Research Journal of Multidisciplinary Technovation (pp. 1–10). Asian Research Association. https://doi.org/10.34256/irjmt1921
+\bibitem{b8} Tinapat Limsila, Aphiphu Sirimangkalalo, Wasutha Chuengwutigool and Weinian Feng, Computer-vision-powered Automatic Waste Sorting Bin: a Machine Learning-based Solution on Waste Management, 2023 J. Phys.: Conf. Ser. 2550 012030
+\bibitem{b9} Atthirawong, Walailak. (2016). Factors Affecting Household Participation In Solid Waste
+Management Segregation And Recycling In Bangkok, Thailand. 198-203. 10.7148/2016-0198.
+\bibitem{b10} Wu, Ziliang, Zhang, Duo, Shao, Yanhua, Zhang, Xiaoqiang Zhang, Xingping  Feng, Yupei  Cui, Peng. (2021). Using YOLOv5 for Garbage Classification. 35-38. 10.1109/PRAI53619.2021.9550790.
+\bibitem{b11} Prasanna M, A., Vikash Kaushal, S., and Mahalakshmi, P. (2018). Survey onidentification and classification of waste for efficient disposal and recycling. In International Journal of Engineering; Technology (Vol. 7, Issue 2.8, p. 520). Science Publishing Corporation. https://doi.org/10.14419/ijet.v7i2.8.10513
+\bibitem{b12} Xin, M., Wang, Y. Research on image classification model based on deep convolutional neural network. J Image Video Proc. 2019, 40 (2019). https://doi.org/10.1186/s13640-019-0417-8
+\bibitem{b13} Semenoglou, A.-A., Spiliotis, E., and Assimakopoulos, V. (2023). Image-based time series forecasting: A deep convolutional neural network approach. In Neural Networks (Vol. 157, pp. 39–53). Elsevier BV. https://doi.org/10.1016/j.neunet.2022.10.006
+\bibitem{b14} Kumar, A., and Srivastava, S. (2020). Object Detection System Based on Convolution Neural Networks Using Single Shot Multi-Box Detector. In Procedia Computer Science (Vol. 171, pp. 2610–2617). Elsevier BV. https://doi.org/10.1016/j.procs.2020.04.283
+
+\end{thebibliography}
+\end{document}
