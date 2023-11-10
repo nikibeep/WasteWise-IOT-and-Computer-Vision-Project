@@ -11,6 +11,8 @@
 \usepackage{lipsum} 
 \usepackage{dblfloatfix}
 \pagestyle{fancy}
+\usepackage{multicol}
+\usepackage{eso-pic}
 \fancyhf{}
 
 \lhead{\begin{center}   
@@ -23,7 +25,13 @@
     % \fancyhf{}  % Clear header and footer
     \renewcommand{\footrulewidth}{0.4pt}  % Add a horizontal line above the footer
     \fancyfoot[L]{\large \textbf{979-8-3503-8343-0/24/\$31.00 ©2024 IEEE}}
+    \renewcommand{\footrule}{\hrule width\dimexpr\textwidth-10.5cm\relax height\footrulewidth\vskip-\footrulewidth}
 }
+% \AddToShipoutPictureBG{%
+%   \AtPageLowerLeft{%
+%     \put(\LenToUnit{1cm},\LenToUnit{2cm}){\vrule width 0.4pt height \LenToUnit{\dimexpr\textheight-4cm\relax}}%
+%   }%
+% }
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
