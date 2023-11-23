@@ -5,8 +5,8 @@
 #include <Wire.h>// Include the AccelStepper library for controlling the stepper motor
 
 // Replace with your network credentials
-const char* ssid = "obdo";
-const char* password = "obdo1234";
+const char* ssid = "stinger";
+const char* password = "honeybee4U";
 
 WebServer server(80);  // Create a web server object
 
