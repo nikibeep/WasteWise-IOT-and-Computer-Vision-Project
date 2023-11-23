@@ -111,6 +111,7 @@ void setup() {
 
 
 }
+}
 
 void loop() {
 
@@ -152,7 +153,7 @@ void loop() {
             calculateRotation(currentAngle, 90, direction, rotationAngle);
             // You can add your custom code here for the 'B' command.
             server.send(200, "text/plain", "B CMD: Action for 'B' command");
-        } else if (input == 'M') {
+        } else if (input == 'm') {
             // Handle 'M' command - perform action for 'M'
             calculateRotation(currentAngle, 180, direction, rotationAngle);
             // You can add your custom code here for the 'M' command.
