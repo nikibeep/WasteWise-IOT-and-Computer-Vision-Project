@@ -1,31 +1,30 @@
-![Alt Text]([https://s4.gifyu.com/images/Bin23.gif](https://s5.gifyu.com/images/SjMqn.gif))
-Bin23
-# Intelligent Waste Segregation System
+![](https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/raw/main/Bin23.gif)
+# WasteWise : IOT and Computer Vision based automatic waste segregation Project
 
 ## Overview
 
-The Intelligent Waste Segregation System is a smart solution for automating waste segregation using computer vision and an ESP32 microcontroller. The system utilizes an IP camera, YOLOv8 object detection model, and ESP32 to classify waste and efficiently direct it to the appropriate bins.
+The Intelligent Waste Segregation System is a smart solution for automating waste segregation using computer vision and an ESP32 microcontroller. The system utilizes an IP camera, YOLOv8 object detection model, and ESP32 to classify waste and efficiently direct it to the appropriate bins for Plastic, Metal, Biodegradable. Monitoring of the bins are conducted using a dashboard for live data collections from the ultrasonic sensors.
 
 ## Workflow
 
 1. **Garbage Entry Detection:**
    - LED lights and an IP camera detect the entering of garbage.
-   - The camera captures an image of the garbage on a sliding door.
+   - The camera captures an image of the garbage on a trap door.
 
 2. **Image Preparation:**
    - Images are manually taken and labeled using Roboflow.
    - The dataset is split, and augmentations are applied to prepare it for training.
 
 3. **Training the Model:**
-   - YOLOv8, implemented in PyTorch, is used for object detection.
-   - Model training involves adjusting parameters such as image resolution, batch size, and epochs.
+   - custom YOLOv8, implemented in PyTorch, is used for object detection.
+   - Model training involves adjusting parameters such as image resolution of 640*480, batch size of 32, and epochs of 50.
 
 4. **Deployment:**
-   - Python is used for deployment, leveraging ESP32.GPIO, PyTorch, OpenCV-Python, and YAML.
-   - The ESP32 controls GPIO pins and communicates with the YOLOv8 model.
+   - Python is used for deployment, leveraging ESP32.GPIO, PyTorch, OpenCV-Python.
+   - The ESP32 controls GPIO pins and communicates with the YOLOv8 model running on the edge computer.
 
 5. **Waste Disposal:**
-   - Based on the detected waste type, the trap door opens, dropping the garbage into the appropriate sorting bin.
+   - Based on the detected waste type, the trap door opens, dropping the garbage into the appropriate sorting bin by falling on the sliding door mounted on the 360 stepper motor.
 
 6. **Bin Status Monitoring:**
    - Ultrasonic sensors monitor the fill level of each waste bin.
@@ -41,7 +40,6 @@ The Intelligent Waste Segregation System is a smart solution for automating wast
 - OpenCV
 - PyTorch
 - ESP32.GPIO
-- YAML
 
 ## Setup
 
