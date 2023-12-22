@@ -1,4 +1,4 @@
-![Alt Text]([https://s4.gifyu.com/images/Bin23.gif](https://s5.gifyu.com/images/SjMqn.gif))
+![Alt Text]([[https://s4.gifyu.com/images/Bin23.gif](https://s5.gifyu.com/images/SjMqn.gif)](https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/edit/main/Bin23.gif))
 Bin23
 # Intelligent Waste Segregation System
 
