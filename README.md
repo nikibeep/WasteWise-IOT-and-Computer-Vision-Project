@@ -34,6 +34,10 @@ The Intelligent Waste Segregation System is a smart solution for automating wast
    - A dynamic dashboard provides real-time information on bin status.
    - Web or mobile applications allow waste management authorities to make informed decisions.
 
+## Architecture Diagram 
+
+<a href="https://ibb.co/p4nw6Bw"><img src="https://i.ibb.co/WBs5N45/wastewise-arch.png" alt="wastewise-arch" border="0"></a>
+
 ## Dependencies
 
 - Python 3
