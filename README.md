@@ -1,4 +1,5 @@
-![Alt Text](https://gifyu.com/image/SjMqn)
+![Alt Text]([https://s4.gifyu.com/images/Bin23.gif](https://s5.gifyu.com/images/SjMqn.gif))
+Bin23
 # Intelligent Waste Segregation System
 
 ## Overview
