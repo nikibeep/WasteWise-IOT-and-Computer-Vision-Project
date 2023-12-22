@@ -1,4 +1,4 @@
-![Alt Text]([https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/raw/main/Bin23.gif](https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/Bin23.gif ))
+![Alt Text]([https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/raw/main/Bin23.gif](https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/Bin23.gif))
 # Intelligent Waste Segregation System
 
 ## Overview
