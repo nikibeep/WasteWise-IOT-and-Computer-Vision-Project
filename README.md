@@ -46,11 +46,11 @@ The Intelligent Waste Segregation System is a smart solution for automating wast
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+    git clone https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project.git
+    cd WasteWise-IOT-and-Computer-Vision-Project
     ```
 
-2. Install dependencies:
+2.  Create a conda environment and Install dependencies:
 
     ```bash
     pip install -r requirements.txt
@@ -60,7 +60,4 @@ The Intelligent Waste Segregation System is a smart solution for automating wast
 
 ## Usage
 
-Run the main script:
-
-```bash
-python main.py
+Run the .ipynb
