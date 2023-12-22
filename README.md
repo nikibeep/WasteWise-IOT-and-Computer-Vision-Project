@@ -1,5 +1,13 @@
 ![](https://github.com/nikibeep/WasteWise-IOT-and-Computer-Vision-Project/raw/main/Bin23.gif)
 # WasteWise : IOT and Computer Vision based automatic waste segregation Project
+## Table of Contents
+- [Overview](#overview)
+- [Workflow](#workflow)
+- [Architecture Diagram](#architecture-diagram)
+- [Image Preparation](#image-preparation)
+- [Dependencies](#dependencies)
+- [Setup](#setup)
+- [Usage](#usage)
 
 ## Overview
 
@@ -37,6 +45,10 @@ The Intelligent Waste Segregation System is a smart solution for automating wast
 ## Architecture Diagram 
 
 <a href="https://ibb.co/p4nw6Bw"><img src="https://i.ibb.co/WBs5N45/wastewise-arch.png" alt="wastewise-arch" border="0"></a>
+
+## Image Preparation
+
+
 
 ## Dependencies
 
