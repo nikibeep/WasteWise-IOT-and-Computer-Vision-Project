@@ -1,3 +1,4 @@
+[![SjMqn.gif](https://s5.gifyu.com/images/SjMqn.gif)](https://gifyu.com/image/SjMqn)
 # Intelligent Waste Segregation System
 
 ## Overview
